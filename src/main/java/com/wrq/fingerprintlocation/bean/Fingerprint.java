@@ -49,4 +49,16 @@ public class Fingerprint {
         }
     }
 
+    public Fingerprint(int id, double xLabel, double yLabel, int localLable, int roomLabel, String signals) {
+        this.id = id;
+        this.xLabel = xLabel;
+        this.yLabel = yLabel;
+        this.localLable = localLable;
+        this.roomLabel = roomLabel;
+        this.signals = signals;
+    }
+
+    public Fingerprint(int id) {
+        this.id = id;
+    }
 }

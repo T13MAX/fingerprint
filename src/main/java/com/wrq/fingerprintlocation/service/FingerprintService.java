@@ -11,6 +11,7 @@ import org.springframework.ui.ModelMap;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @Author 呆呆
@@ -32,6 +33,10 @@ public class FingerprintService {
 
     public void add(Fingerprint fingerprint){
         fingerprintDao.save(fingerprint);
+    }
+
+    public Optional<Fingerprint> findById(int id){
+         return fingerprintDao.findById(id);
     }
 
     public Pair findPoint(List<Double> signals) {

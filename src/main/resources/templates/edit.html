@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<br/>
+<br/>
+<br/>
+<form th:action="@{/save}" method="post">
+    <span style="width:150px;">id</span><input type="text" name ="id" th:value="${fingerprint.id}"/><br/>
+    <span style="width:150px;">xLabel</span><input type="text" name="xLabel" th:value="${fingerprint.xLabel}"/><br/>
+    <span style="width:150px;">yLabel</span><input type="text" name="yLabel" th:value="${fingerprint.yLabel}"/><br/>
+    <span style="width:150px;">localLable</span><input type="text" name="localLable"
+                                                th:value="${fingerprint.localLable}"/><br/>
+    <span style="width:150px;">roomLabel</span><input type="text" name="roomLabel" th:value="${fingerprint.roomLabel}"/><br/>
+    <span style="width:150px;">signals</span><input type="text" name="signals" th:value="${fingerprint.signals}"/><br/>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>

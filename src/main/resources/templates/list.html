@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a th:href="${'/add?id='+0}">添加</a>
+<table border="1">
+    <tr>
+        <th>id</th>
+        <th>xLabel</th>
+        <th>yLabel</th>
+        <th>localLable</th>
+        <th>roomLabel</th>
+        <th>signals</th>
+        <th>操作</th>
+    </tr>
+    <tr th:each="fingerprint:${list}">
+        <td th:text="${fingerprint.id}"></td>
+        <td th:text="${fingerprint.xLabel}"></td>
+        <td th:text="${fingerprint.yLabel}"></td>
+        <td th:text="${fingerprint.localLable}"></td>
+        <td th:text="${fingerprint.roomLabel}"></td>
+        <td th:text="${fingerprint.signals}"></td>
+        <td><a th:href="${'/delete?id='+fingerprint.id}">删除</a><a th:href="${'/add?id='+fingerprint.id}">修改</a></td>
+    </tr>
+</table>
+</body>
+</html>
